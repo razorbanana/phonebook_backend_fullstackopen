@@ -16,7 +16,8 @@ app.use(morgan(function (tokens, req, res) {
       tokens['response-time'](req, res), 'ms',
       str
     ].join(' ')
-  }))
+}))
+app.use(express.static('build'))
 app.use(express.json());
 app.use(cors())
 
