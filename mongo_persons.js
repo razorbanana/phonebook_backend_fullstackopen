@@ -96,7 +96,7 @@ app.delete('/api/persons/:id', (request, response) => {
     }).catch(error=>next(error))
 })
 
-app.post('/api/persons', (request, response) => {
+app.post('/api/persons', (request, response, next) => {
     console.log(`post /api/persons`)
     const body = request.body
     console.log(request.body)
